@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 'use strict';
 
 import React, { Component } from 'react';
@@ -14,10 +8,7 @@ import {
   View,
   NavigatorIOS
 } from 'react-native';
-
-// neither of these attempts to import SearchPage work
 import SearchPage from './SearchPage';
-// var SearchPage = require('./SearchPage');
 
 const styles = StyleSheet.create({
   text: {
@@ -30,14 +21,6 @@ const styles = StyleSheet.create({
     flex: 1
   }
 });
-
-class HelloWorld extends Component {
-  render() {
-    return (
-      <Text style={styles.text}>Hello World (Please work!)</Text>
-    );
-  }
-}
 
 class PropertyFinderApp extends Component {
   render() {

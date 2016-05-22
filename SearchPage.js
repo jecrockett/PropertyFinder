@@ -41,5 +41,4 @@ class SearchPage extends Component {
   }
 }
 
-//'module' is undefined says jshint. Why?
 module.exports = SearchPage;
