@@ -1,7 +1,7 @@
 'use strict';
 
-import React from 'react-native';
-var {
+import React, {Component} from 'react';
+import {
   StyleSheet,
   Text,
   TextInput,
@@ -9,10 +9,8 @@ var {
   Picker,
   TouchableHighlight,
   ActivityIndicatorIOS,
-  Image,
-  Component,
-  Linking
-} = React;
+  Image
+} from 'react-native';
 
 const styles = StyleSheet.create({
   description: {
@@ -43,4 +41,5 @@ class SearchPage extends Component {
   }
 }
 
+//'module' is undefined says jshint. Why?
 module.exports = SearchPage;

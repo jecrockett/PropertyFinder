@@ -15,6 +15,7 @@ import {
   NavigatorIOS
 } from 'react-native';
 
+// neither of these attempts to import SearchPage work
 import SearchPage from './SearchPage';
 // var SearchPage = require('./SearchPage');
 
@@ -45,7 +46,7 @@ class PropertyFinderApp extends Component {
         style={styles.container}
         initialRoute={{
           title: 'Property Finder',
-          component: HelloWorld
+          component: SearchPage
         }}/>
     );
   }
