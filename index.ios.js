@@ -15,8 +15,20 @@ import {
   NavigatorIOS
 } from 'react-native';
 
-var SearchPage = require('./SearchPage');
-// import SearchPage from './SearchPage';
+import SearchPage from './SearchPage';
+// var SearchPage = require('./SearchPage');
+
+const styles = StyleSheet.create({
+  text: {
+    color: 'black',
+    backgroundColor: 'white',
+    fontSize: 30,
+    margin: 80
+  },
+  container: {
+    flex: 1
+  }
+});
 
 class HelloWorld extends Component {
   render() {
@@ -38,17 +50,5 @@ class PropertyFinderApp extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  text: {
-    color: 'black',
-    backgroundColor: 'white',
-    fontSize: 30,
-    margin: 80
-  },
-  container: {
-    flex: 1
-  }
-});
 
 AppRegistry.registerComponent('PropertyFinder', () => PropertyFinderApp);
