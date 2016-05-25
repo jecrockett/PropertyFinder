@@ -37,10 +37,7 @@ const styles = StyleSheet.create({
   button: {
     height: 36,
     flex: 1,
-    // flexDirection: 'row',
     backgroundColor: '#48BBEC',
-    // borderColor: '#48BBEC',
-    // borderWidth: 1,
     borderRadius: 8,
     marginBottom: 10,
     alignSelf: 'stretch',
@@ -56,10 +53,25 @@ const styles = StyleSheet.create({
     borderColor: '#48BBEC',
     borderRadius: 8,
     color: '#48BBEC'
+  },
+  image: {
+    width: 217,
+    height: 138
   }
 });
 
 class SearchPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchstring: 'london'
+    };
+  }
+
+  onSearchTextChange(event) {
+    this.setState({ searchString: event.nativeEvent.text });
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -72,6 +84,8 @@ class SearchPage extends Component {
         <View style={styles.flowRight}>
           <TextInput
             style={styles.searchInput}
+            value={this.state.searchString}
+            onChange={this.onSearchTextChange.bind(this)}
             placeholder='Search via name or postcode'/>
           <TouchableHighlight
             style={styles.button}
@@ -84,6 +98,9 @@ class SearchPage extends Component {
           underlayColor='#99d9f4'>
           <Text style={styles.buttonText}>Location</Text>
         </TouchableHighlight>
+        <Image
+          source={require("./resources/house.png")}
+          style={styles.image}/>
       </View>
     );
   }
